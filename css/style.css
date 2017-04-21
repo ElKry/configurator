@@ -1,0 +1,338 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #fff;
+}
+
+code {
+  font-size: 80%;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	font-weight: bold;
+}
+
+.configurator, .dpi-calc {
+	padding-bottom: 50px;
+}
+
+.param-btn-box {
+	text-align: center;
+}
+
+.param-btn-box.cpu,
+.param-btn-box.ram-gb {
+	text-align: left;
+}
+
+.param-btn-box.psu {
+	text-align: right;
+}
+
+.config-box {
+	padding-top: 50px;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.open-popup-btn:not(.send-form) {
+	width: 112px;
+  height: 102px;
+  text-align: center;
+}
+
+.open-popup-btn span.icon {
+	width: 64px;
+  height: 45px;
+  display: block;
+  margin: 10px auto 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.btn {
+  color: #1e72b9;
+  font-size: 18px;
+}
+
+.btn.select {
+	background-color: #e0e0e0;
+	background-image: none;
+  border-color: #dbdbdb;
+  webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+  box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+  color: #333;
+}
+
+.open-popup-btn.select-cpu span.icon {
+	background-image: url('../img/config_element_ico_3.png')
+}
+
+.open-popup-btn.select-cpu:hover span.icon {
+	background-image: url('../img/config_element_ico_3_act.png')
+}
+
+.open-popup-btn.select-ram span.icon {
+	background-image: url('../img/config_element_ico_4.png')
+}
+
+.open-popup-btn.select-ram:hover span.icon {
+	background-image: url('../img/config_element_ico_4_act.png')
+}
+
+.open-popup-btn.select-hdd span.icon {
+	background-image: url('../img/config_element_ico_10.png')
+}
+
+.open-popup-btn.select-hdd:hover span.icon {
+	background-image: url('../img/config_element_ico_10_act.png')
+}
+
+.open-popup-btn.select-options span.icon {
+	background-image: url('../img/config_element_ico_6.png')
+}
+
+.open-popup-btn.select-options:hover span.icon {
+	background-image: url('../img/config_element_ico_6_act.png')
+}
+
+section.popup-box {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+	top: 0;
+}
+
+.popup-box-overlay {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .2);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+section.popup-box .popup {
+	position: absolute;
+	top: 100px;
+	width: 700px;
+	left: 50%;
+	margin-left: -350px;
+	background-color: #fff;
+	padding: 20px;
+  border-radius: 3px;
+}
+
+section.popup-box .popup#send-form {
+	padding: 20px 40px 30px 30px;
+}
+
+.box-tab:not(.visible) {
+	display: none;
+}
+
+.range {
+	margin: 20px 0;
+}
+
+#custom-handle {
+	-webkit-transition: left 0.1s ease-out 0s;
+  -o-transition: left 0.1s ease-out 0s;
+  -moz-transition: left 0.1s ease-out 0s;
+  transition: left 0.1s ease-out 0s;
+  width: 3em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+.form-send-config .form-group.input-form-group {
+	width: 49%;
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.form-send-config .form-group.input-form-group:nth-of-type(odd) {
+	margin-right: 1%;
+}
+
+a.close-form {
+	position: absolute;
+  right: 10px;
+  top: 5px;
+  color: #515151;
+  text-decoration: none;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1em;
+}
+
+.nav-tabs > li.disable > a,
+.nav-tabs > li.disable > a:hover {
+	color: #c2c2c2;
+  background: none;
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-top-color: #fff;
+  cursor: default;
+}
+
+ul.config-info {
+	list-style-type: none;
+	padding: 0 
+}
+
+ul.config-info > li {
+	margin: 10px 0;
+}
+
+.owl-theme {
+	position: relative;
+	padding: 0 60px;
+	margin: 20px 0;
+}
+
+.owl-carousel.owl-drag .owl-item {
+	border: 1px solid #fff;
+}
+
+.owl-theme .item {
+	border: 1px solid #cfd8dc;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.owl-theme .item:hover {
+	border-color: #005097;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+	position: absolute;
+	top: 35px;
+  width: 18px;
+  height: 50px;
+  background: none;
+  color: #005097;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+	background: none;
+	color: #009ce1;
+}
+
+.owl-theme .owl-nav .owl-prev {
+	left: 0;
+}
+
+.owl-theme .owl-nav .owl-next {
+	right: 0;
+}
+
+.mfp-figure figure {
+	background-color: #fff;
+}
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+    padding-right: 0;
+    width: 100%;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #515151;
+    text-decoration: none;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 1em;
+}
+
+a.image-popup-vertical-fit:focus {
+	outline: none;
+}
+
+/*Калькулятор DPI*/
+.param-btn-box.dpi-shema .btn {
+	height: 150px;
+	width: 30%;
+	margin-right: 2%;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.param-btn-box.dpi-shema .btn span.icon {
+	background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 auto;
+  width: 90%;
+  display: block;
+  height: 100px;
+}
+
+.btn.in-the-gap span.icon {
+	background-image: url(../img/shema-skat-razriv1.png);
+}
+
+.btn.asymmetric span.icon {
+	background-image: url(../img/shema-skat-assim1.png);
+}
+
+.btn.mirroring span.icon {
+	background-image: url(../img/shema-skat-zerkal1.png);
+}
+
+ul.radio, ul.checkbox {
+	list-style-type: none;
+	padding-left: 20px;
+}
+
+ul.radio > li, ul.checkbox > li {
+	margin: 10px 0;
+}
+
+

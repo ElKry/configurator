@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Конфигуратор</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link type="text/css" href="jquery-ui/jquery-ui.css" rel="stylesheet" /> 
+    <link type="text/css" href="font-awesome/css/font-awesome.css" rel="stylesheet" /> 
+    <link type="text/css" href="owl-carousel/assets/owl.carousel.css" rel="stylesheet" />  
+    <link type="text/css" href="owl-carousel/assets/owl.theme.default.css" rel="stylesheet" /> 
+    <link type="text/css" href="magnific-popup/magnific-popup.css" rel="stylesheet" /> 
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Конфигуратор</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Конфигуратор сервера QuantaGrid D51B-1U</h1>
+      </div>
+    </div> 
+      <div class="configurator">
+        <section class="param-box">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="param-btn-box cpu"> 
+                  <a href="#" class="btn btn-default select" data-type="cpu-count" data-cpu-count="1">1xCPU</a>
+                  <a href="#" class="btn btn-default" data-type="cpu-count" data-cpu-count="2">2xCPU</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="param-btn-box body"> 
+                  <a href="#" class="btn btn-default select" id="body-1" data-type="body-type" data-num="4" data-body-type="4x3.5 диска с возможностью горячей замены (2x2.5 fixed   SSD)">Корпус 4x3.5"</a>
+                  <a href="#" class="btn btn-default" id="body-2" data-type="body-type" data-num="10" data-body-type="10x2.5 SSD с возможностью горячей замены">Корпус 10x2.5"</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="param-btn-box psu" data-name="750W AC, Redundant, 86 mm (Platinum)"> 
+                  <a href="#" class="btn btn-default select" data-type="psu-count" data-psu-count="1">1xPSU</a>
+                  <a href="#" class="btn btn-default" data-type="psu-count" data-psu-count="2">2xPSU</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="config-box">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="config-btn-box">
+                  <a href="#select-cpu" class="btn btn-default open-popup-btn select-cpu">
+                    <span class="icon"></span>
+                    <span class="text">Core/Herz</span>
+                  </a>
+                  <ul class="core-list"></ul>
+                </div>
+                <div class="config-btn-box">
+                  <a href="#select-ram" class="btn btn-default open-popup-btn select-ram">
+                    <span class="icon"></span>
+                    <span class="text">RAM</span>
+                  </a>
+                  <ul class="ram-list"></ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="photo-box">
+                  <img class="body-1-img" src="img/QG-1U/4x1.png" alt='4x3.5" диска с возможностью горячей замены (2x 2.5" fixed SSD)'>
+                  <img class="body-2-img hidden" src="img/QG-1U/10x2.png" alt='10x2.5" SSD с возможностью горячей замены'>
+                </div>
+              </div>
+              <div class="col-md-3 align-right">
+                <div class="config-btn-box">
+                  <a href="#select-hdd" class="btn btn-default open-popup-btn select-hdd">
+                    <span class="icon"></span>
+                    <span class="text">HDD/RAID</span>
+                  </a>
+                  <ul class="hdd-list"></ul>
+                </div>
+                <div class="config-btn-box">
+                  <a href="#select-options" class="btn btn-default open-popup-btn select-options">
+                    <span class="icon"></span>
+                    <span class="text">Опции</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 20px;">
+        	<div class="container">
+        	  <div class="row">
+              <div class="col-md-12" style="text-align: center;">
+                <!--<a href="#" class="btn update-config-btn btn-default">Обновить конфигурацию</a> -->
+                <div class="owl-carousel owl-theme">
+                  <div class="item">
+                    <a class="image-popup-vertical-fit" href="img/QG-1U/pic7.png" title="">
+                      <img src="img/QG-1U/pic7.png">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="image-popup-vertical-fit" href="img/QG-1U/pic8.png" title="">
+                      <img src="img/QG-1U/pic8.png">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="image-popup-vertical-fit" href="img/QG-1U/pic2.png" title="">
+                      <img src="img/QG-1U/pic2.png">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="image-popup-vertical-fit" href="img/QG-1U/pic1.png" title="">
+                      <img src="img/QG-1U/pic1.png">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="image-popup-vertical-fit" href="img/QG-1U/pic5.png" title="">
+                      <img src="img/QG-1U/pic5.png">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="image-popup-vertical-fit" href="img/QG-1U/pic6.png" title="">
+                      <img src="img/QG-1U/pic6.png">
+                    </a>
+                  </div>
+                </div>
+                <a href="#send-form" class="btn open-popup-btn send-form btn-default">Получить предложение</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="popup-box hidden">
+          <div class="popup-box-overlay"></div>
+          <div class="popup hidden" id="select-hdd">
+            <ul class="nav nav-tabs hdd-tabs">
+              <li class="active raid"><a href="#raid">RAID/HBA</a></li>
+              <li class="sata"><a href="#sata">SATA</a></li>
+              <li class="sas"><a href="#sas">SAS</a></li>
+              <li class="ssd"><a href="#ssd">SSD</a></li>
+            </ul>
+            <div class="box-tab visible raid" id="raid">
+              <ul class="hdd-list radio">
+                <li class="raid-title">RAID-контроллер с поддержкой уровней 0, 1, 5, 6, 10, 50 и 60:</li>
+                <li>
+                  <label for="raid-1"><input type="radio" name="hdd" checked="" id="raid-1">LSI MegaRAID Entry SAS 9341-8i (8 ports SAS3, no Cache)</label>
+                </li>
+                <li>
+                  <label for="raid-2"><input type="radio" name="hdd" id="raid-2">LSI MegaRAID SAS 9361-4i (4 ports SAS3, 1GB Cache)</label>
+                </li>
+                <li>
+                  <label for="raid-3"><input type="radio" name="hdd" id="raid-3">LSI MegaRAID SAS 9361-8i (8 ports SAS3, 1GB Cache)</label>
+                </li>
+                <li>
+                  <label for="raid-4"><input type="radio" name="hdd" id="raid-4">LSI MegaRAID SAS 9361-4i4e (8 ports SAS3, 1GB Cache)</label>
+                </li>
+                <li class="raid-title">HBA-адаптер:</li>
+                <li>
+                  <label for="hba-1"><input type="radio" name="hdd" id="hba-1">LSI SAS 9300-8i (8port SAS3)</label>
+                </li>
+                <li>
+                  <label for="hba-2"><input type="radio" name="hdd" id="hba-2">LSI SAS 9300-4i4e (8port SAS3)</label>
+                </li>
+                <li>
+                  <label for="hba-3"><input type="radio" name="hdd" id="hba-3">LSI SAS 9300-8e (8port SAS3)</label>
+                </li>
+                <li>
+                  <label for="not"><input type="radio" name="hdd" id="not">Не требуется</label>
+                </li>
+              </ul>
+            </div>
+            <div class="box-tab sata" id="sata">
+              <p>Выберете тип диска:</p>
+              <ul class="sata-list radio">
+                <li>
+                  <label for="sata-1"><input type="radio" name="sata" checked="" id="sata-1">SATA Ent, 4 ГБ</label>
+                </li>
+                <li>
+                  <label for="sata-2"><input type="radio" name="sata" checked="" id="sata-2">SATA Ent, 6 ГБ</label>
+                </li>
+                <li>
+                  <label for="sata-3"><input type="radio" name="sata" checked="" id="sata-3">SATA Ent, 8 ГБ</label>
+                </li>
+              </ul>
+              <p>Выберете количество дисков:</p>
+              <label for="sata-num">
+                <input class="form-control hdd-num" type="number" min="0" max="4" data-old-count="2" value="0" id="sata-num">
+              </label>
+              <!--<select class="form-control" id="sata-num">
+                <option value="0">0</option>
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>-->
+            </div>
+            <div class="box-tab sas" id="sas">
+              <p>Выберете тип диска:</p>
+              <ul class="sas-list radio">
+                <li>
+                  <label for="sas-1"><input type="radio" name="sas" checked="" id="sas-1">SAS, 900 GB</label>
+                </li>
+                <li>
+                  <label for="sas-2"><input type="radio" name="sas" checked="" id="sas-2">SAS 1200 GB</label>
+                </li>
+                <li>
+                  <label for="sas-3"><input type="radio" name="sas" checked="" id="sas-3">SAS 1800 GB</label>
+                </li>
+              </ul>
+              <p>Выберете количество дисков:</p>
+              <label for="sas-num">
+                <input class="form-control hdd-num" type="number" min="0" max="4" data-old-count="2" value="0" id="sas-num">
+              </label>
+              <!--<select class="form-control" id="sas-num">
+                <option value="0">0</option>
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>-->
+            </div>
+            <div class="box-tab ssd" id="ssd">
+              <p>Выберете тип диска:</p>
+              <ul class="ssd-list radio">
+                <li>
+                  <label for="ssd-1"><input type="radio" name="ssd" checked="" id="ssd-1">SSD SATA, 240 ГБ</label>
+                </li>
+                <li>
+                  <label for="ssd-2"><input type="radio" name="ssd" checked="" id="ssd-2">SSD SATA, 960 ТБ</label>
+                </li>
+                <li>
+                  <label for="ssd-3"><input type="radio" name="ssd" checked="" id="ssd-3">SSD SATA, 1.92 ТБ</label>
+                </li>
+              </ul>
+              <p>Выберете количество дисков:</p>
+              <label for="ssd-num">
+                <input class="form-control hdd-num" type="number" min="0" max="4" data-old-count="2" value="0" id="ssd-num">
+              </label>
+              <!--<select class="form-control" id="ssd-num">
+                <option value="0">0</option>
+                <option value="1" selected="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>-->
+            </div>
+            <a href="#" class="btn close-btn btn-default">Назад</a>
+            <a href="#" class="btn close-btn btn-default">Продолжить</a>
+          </div>
+          <div class="popup hidden" id="select-ram">
+            <p>Выберите объем модуля</p>
+            <div class="param-btn-box ram-gb"> 
+              <a href="#" class="btn btn-default select" data-type="ram-volume" data-ram-volume="16">16 ГБ</a>
+              <a href="#" class="btn btn-default" data-type="ram-volume" data-ram-volume="32">32 ГБ</a>
+            </div>
+            <p>Выбрите количество модулей</p>
+            <div class="range" id="cpu-range">
+              <div id="custom-handle" class="ui-slider-handle"></div>
+            </div>
+            <a href="#" class="btn close-btn btn-default">Назад</a>
+            <a href="#" class="btn close-btn btn-default">Продолжить</a>
+          </div>
+          <div class="popup hidden" id="select-cpu">
+            <ul class="cpu-list radio">
+              <li>
+                <label for="cpu-1"><input type="radio" name="cpu" checked="" id="cpu-1">Intel® Xeon® E5-2623 v4 (4 ядра, частота 2.60 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-2"><input type="radio" name="cpu" id="cpu-2">Intel® Xeon® E5-2637 v4 (4 ядра, частота 3.50 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-3"><input type="radio" name="cpu" id="cpu-3">Intel® Xeon® E5-2643 v4 (6 ядер, частота 3.40 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-4"><input type="radio" name="cpu" id="cpu-4">Intel® Xeon® E5-2620 v4 (8 ядер, частота 2.10 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-5"><input type="radio" name="cpu" id="cpu-5">Intel® Xeon® E5-2630 v4 (10 ядер, частота 2.20 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-6"><input type="radio" name="cpu" id="cpu-6">Intel® Xeon® E5-2640 v4 (10 ядер, частота 2.40 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-7"><input type="radio" name="cpu" id="cpu-7">Intel® Xeon® E5-2650 v4 (12 ядер, частота 2.20 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-8"><input type="radio" name="cpu" id="cpu-8">Intel® Xeon® E5-2660 v4 (14 ядер, частота 2.00 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-9"><input type="radio" name="cpu" id="cpu-9">Intel® Xeon® E5-2680 v4 (14 ядер, частота 2.40 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-10"><input type="radio" name="cpu" id="cpu-10">Intel® Xeon® E5-2690 v4 (14 ядер, частота 2.60 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-11"><input type="radio" name="cpu" id="cpu-11">Intel® Xeon® E5-2683 v4 (16 ядер, частота 2.10 GHz)</label>
+              </li>
+              <li>
+                <label for="cpu-12"><input type="radio" name="cpu" id="cpu-12">Intel® Xeon® E5-2698 v4 (20 ядер, частота 2.20 GHz)</label>
+              </li>
+            </ul>
+            <a href="#" class="btn close-btn btn-default">Назад</a>
+            <a href="#" class="btn close-btn btn-default">Продолжить</a>
+          </div>
+          <div class="popup hidden" id="select-options">
+            <p>Выберите основной слот LOM:</p>
+            <ul class="slot-list-important radio">
+              <li>
+                <label for="slot-important-1"><input type="radio" name="slot-important" checked="" id="slot-important-1">Intel i350 2x1GbE Base-T ( + выделенный порт управления 1GbE)</label>
+              </li>
+              <li>
+                <label for="slot-important-2"><input type="radio" name="slot-important" id="slot-important-2">Intel x540 2x10GbE Base-T ( + выделенный порт управления 1GbE)</label>
+              </li>
+            </ul>
+            <div class="slot-block-extension hidden">
+              <p>Выберите слот расширения</p>
+              <ul class="slot-list-extension radio">
+                <li>Слот расширения стандарта Open Compute Project (OCP)</li>
+                <li>
+                  <label for="slot-extension-1"><input type="radio" name="slot-extension" id="slot-extension-1">2x10GbE SFP+ (Intel 82599ES OCP LAN)</label>
+                </li>
+                <li>
+                  <label for="slot-extension-2"><input type="radio" name="slot-extension" id="slot-extension-2">2x10GbE Base-T (Intel x540 OCP LAN)</label>
+                </li>
+                <li>
+                  <label for="slot-extension-3"><input type="radio" name="slot-extension" id="slot-extension-3">2x1GbE Base-T (Intel i350 OCP LAN)</label>
+                </li>
+                <li>Слот расширения PCIe Gen3 x16 FHHL</li>
+                <li>
+                  <label for="slot-extension-4"><input type="radio" name="slot-extension" id="slot-extension-4">2x16Gb FC (Qlogic QLE2672-CK)</label>
+                </li>
+                <li>
+                  <label for="slot-extension-5"><input type="radio" name="slot-extension" id="slot-extension-5">2x8Gb FC (Qlogic QLE2562-CK)</label>
+                </li>
+                <li>
+                  <label for="slot-extension-6"><input type="radio" name="slot-extension" id="slot-extension-6">2x10GbE SFP+ (Intel x520-DA2)</label>
+                </li>
+                <li>
+                  <label for="slot-extension-7"><input type="radio" name="slot-extension" id="slot-extension-7">2x10GbE Base-T (Intel x540)</label>
+                </li>
+              </ul>
+            </div>
+            <!--<div class="power-supply">
+              <p>Блок питания 750W AC, Redundant, 86 mm (Platinum):</p>
+              <label for="block-num">
+                <input class="form-control" type="number" min="1" max="2" value="1" id="block-num">
+              </label>
+            </div>-->
+            <a href="#" class="btn close-btn btn-default">Назад</a>
+            <a href="#" class="btn close-btn btn-default">Продолжить</a>
+          </div>
+          <div class="popup hidden" id="send-form">
+            <a href="#" class="close-form close-btn">×</a>
+            <ul class="config-info">
+            </ul>
+            <form action="" class="form-send-config">
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="name" id="name" placeholder="ФИО">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="email" name="email" id="email" required="" placeholder="E-mail">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="phone" name="phone" id="phone" required="" placeholder="Телефон">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="city" id="city" placeholder="Город">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="company" id="company" required="" placeholder="Организация">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="post" id="post" placeholder="Должность">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" type="text" name="comment" id="comment" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="form-group hidden">
+                <textarea class="form-control" type="text" name="config" id="config">kzkzkz</textarea>
+              </div>
+              <button class="submit btn btn-default" type="submit">Отправить</button>
+            </form>
+          </div>
+          <div class="popup hidden" id="form-answer">
+            <a href="#" class="close-form close-btn">×</a>
+            <p class="answer"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer" class="navbar-inverse">
+      <div class="container">
+        <p class="text-muted">© 2008 - 2017 ООО «ИТ-ГРАД»</p>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="query-ui/external/jquery/jquery.js"></script>-->
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/configurator.js"></script>
+    <script src="js/send-form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Конфигуратор</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Конфигуратор</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Собрать СКАТ</h1>
+      </div>
+    </div> 
+      <div class="dpi-calc">
+        <section class="param-box">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Выберите схему подключения*</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="param-btn-box dpi-shema">
+                <a href="#" class="btn btn-default in-the-gap select" data-type="dpi-shema" data-dpi-shema="1">
+                  <span class="text">В разрыв</span>
+                  <span class="icon"></span>
+                </a>
+                <a href="#" class="btn btn-default asymmetric" data-type="dpi-shema" data-dpi-shema="2">
+                  <span class="text">Ассиметричная</span>
+                  <span class="icon"></span>
+                </a>
+                <a href="#" class="btn btn-default mirroring" data-type="dpi-shema" data-dpi-shema="3">
+                  <span class="text">Зеркалирование</span>
+                  <span class="icon"></span>
+                </a>
+              </div>             
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>С какой задачей вы столкнулись*</p>
+                <ul class="dpi-task-list radio">
+                  <li>
+                    <label for="task-1">
+                      <input type="radio" name="dpi-task" checked="" id="task-1">
+                      Фильтрация трафика
+                    </label>
+                  </li>
+                  <li>
+                    <label for="task-2">
+                      <input type="radio" name="dpi-task" id="task-2">
+                      Управление трафиком на уровне канала
+                    </label>
+                  </li>
+                  <li>
+                    <label for="task-3">
+                      <input type="radio" name="dpi-task" id="task-3">
+                      Управление трафиком на уровне абонента
+                    </label>
+                  </li>
+                  <li>
+                    <label for="task-4">
+                      <input type="radio" name="dpi-task" id="task-4">
+                      Предфильтр СОРМ
+                    </label>
+                  </li>
+                  <li>
+                    <label for="task-5">
+                      <input type="radio" name="dpi-task" id="task-5">
+                      Опция КЭШ сервер
+                    </label>
+                  </li>
+                </ul>
+                <p>Выберете функции, которые вам интересны</p>
+                <ul class="dpi-func-list checkbox">
+                  <li>
+                    <label for="func-1">
+                      <input type="checkbox" name="dpi-func" checked="" id="func-1">
+                      Поддержка Bypass
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-2">
+                      <input type="checkbox" name="dpi-func" id="func-2">
+                      Фильтрация по реестру запрещенных сайтов
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-3">
+                      <input type="checkbox" name="dpi-func" id="func-3">
+                      Сбор и анализ статистики по протоколам и направлениям
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-4">
+                      <input type="checkbox" name="dpi-func" id="func-4">
+                     Разметка приоритета трафика в зависимости от протокола Разметка приоритета трафика в зависимости от протокола
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-5">
+                      <input type="checkbox" name="dpi-func" id="func-5">
+                      Оптимизация использования внешних каналов доступа
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-6">
+                      <input type="checkbox" name="dpi-func" id="func-6">
+                      Уведомление абонентов
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-7">
+                      <input type="checkbox" name="dpi-func" id="func-7">
+                      Lawful interception
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-8">
+                      <input type="checkbox" name="dpi-func" id="func-8">
+                      Распределение канала доступа между абонентами
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-9">
+                      <input type="checkbox" name="dpi-func" id="func-9">
+                      Блокировка и замена рекламы
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-10">
+                      <input type="checkbox" name="dpi-func" id="func-10">
+                      Белый список и Captive Portal
+                    </label>
+                  </li>
+                  <li>
+                    <label for="func-11">
+                      <input type="checkbox" name="dpi-func" id="func-11">
+                      Защита от DOS и DDOS атак
+                    </label>
+                  </li>
+                </ul>
+                <p>Выберете пропускную способность</p>
+                <div class="dpi-volume-list checkbox">
+                  <label for="volume-1">
+                    <input type="radio" name="dpi-volume" checked="" id="volume-1">
+                    6 Гбит
+                  </label>
+                  <label for="volume-2">
+                    <input type="radio" name="dpi-volume" checked="" id="volume-2">
+                    20 Гбит
+                  </label>
+                  <label for="volume-3">
+                    <input type="radio" name="dpi-volume" checked="" id="volume-3">
+                    40 Гбит
+                  </label>
+                  <label for="volume-4">
+                    <input type="radio" name="dpi-volume" checked="" id="volume-4">
+                    80 Гбит
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>Отправьте конфигурацию СКАТ и наши специалисты рассчитают стоимость.</p>
+                <a href="#send-form" class="btn open-popup-btn send-form btn-default">Получить предложение</a> 
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="popup-box hidden">
+          <div class="popup-box-overlay"></div>
+          <div class="popup hidden" id="send-form">
+            <a href="#" class="close-form close-btn">×</a>
+            <ul class="config-info">
+            </ul>
+            <form action="" class="form-send-config">
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="name" id="name" placeholder="ФИО">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="email" id="email" required="" placeholder="E-mail">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="phone" id="phone" required="" placeholder="Телефон">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="city" id="city" placeholder="Город">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="company" id="company" required="" placeholder="Организация">
+              </div>
+              <div class="form-group input-form-group">
+                <input class="form-control" type="text" name="post" id="post" placeholder="Должность">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" type="text" name="comment" id="comment" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="form-group hidden">
+                <textarea class="form-control" type="text" name="config" id="config"></textarea>
+              </div>
+              <button class="submit btn btn-default" type="submit">Отправить</button>
+            </form>
+          </div>
+          <div class="popup hidden" id="form-answer">
+            <a href="#" class="close-form close-btn">×</a>
+            <p class="answer"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer" class="navbar-inverse">
+      <div class="container">
+        <p class="text-muted">© 2008 - 2017 ООО «ИТ-ГРАД»</p>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/utils.js"></script>
+    <script src="js/dpi-calc.js"></script>
+    <script src="js/send-form.js"></script>
+  </body>
+</html>
